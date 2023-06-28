@@ -23,6 +23,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+
 .table .table-row > div:not(.lite) {
   display: flex;
   align-items: center;
@@ -98,6 +100,31 @@
   background-color: #ffffff;
   box-shadow: 0 4px 21px -3px rgba(17, 255, 0, 0.15);
   border-color: #058743;
+}
+
+.index-surah-no {
+  color: gold;
+  font-weight: 600;
+  padding-right: 20px;
+  margin-top: 0px;
+}
+.index-surahname-ar {
+  font-size: 15px;
+  float: right;
+}
+.index-main-surah-list {
+  margin: 0 30px 0 30px;
+}
+.letter-Q {
+  font-size: 210px;
+}
+
+/* listsurat */
+.listsurat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background-color: #ffffff;
 }
 
 

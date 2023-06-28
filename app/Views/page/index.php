@@ -62,7 +62,7 @@ if($sura == 0)
 
 
 
-<div class="container">
+<div class="listsurat">
   <div class="row">
     <div class="col-12 text-center">
     </div>
