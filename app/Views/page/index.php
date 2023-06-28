@@ -65,8 +65,6 @@ if($sura == 0)
 <div class="container">
   <div class="row">
     <div class="col-12 text-center">
-
-      
     </div>
   </div>
   <div class="index-main-surah-list">
@@ -75,9 +73,6 @@ if($sura == 0)
       <div class="table trio">
 
         <a href="<?= base_url('/page/' . $q['index']); ?>"
-        
-
-
           ><div class="table-row">
             <div>
               <span class="index-surah-no"><?= $q['index'];  ?></span>
