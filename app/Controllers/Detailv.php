@@ -37,9 +37,10 @@ class Detailv extends Controller
     
 //     );
 
-return view('page/1');
+return view('page/surahview/1');
 
-return view('page/2');
+
+
         // Periksa apakah decoding berhasil
         // if ($data !== null) {
         //     // Decoding berhasil, Anda dapat menggunakan variabel $data
