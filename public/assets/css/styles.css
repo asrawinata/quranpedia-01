@@ -1,5 +1,28 @@
 @charset "UTF-8";
-
+@font-face {
+  font-family: Uthmani;
+  src: url(../../assets/fonts/Uthmani.woff2) format('woff2'), url(../../assets/fonts/Uthmani.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: IndoPak;
+  src: url(../../assets/fonts/IndoPak.woff2) format('woff2'), url(../../assets/fonts/IndoPak.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Cabin;
+  src: local('Cabin-Bold');
+  src: url(../../assets/fonts/Cabin-Bold.eot);
+  src: url(../../assets/fonts/Cabin-Bold.eot?#iefix) format('embedded-opentype'), url(../../assets/fonts/Cabin-Bold.woff2) format('woff2'), url(../../assets/fonts/Cabin-Bold.woff) format('woff'),
+    url(../../assets/fonts/Cabin-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .table .table-row > div:not(.lite) {
   display: flex;
   align-items: center;
@@ -819,3 +842,4 @@ footer.footer {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
 }
+
