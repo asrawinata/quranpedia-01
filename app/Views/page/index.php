@@ -78,7 +78,7 @@
         }
     </script>
 
-  <div class="containerlistsurat">    
+  <div class="containerlistsurat" >    
     <?php foreach ($surah as $q) : ?>
     <?php 
     $sura = isset($_GET['sura']) ? $_GET['sura'] : 0;
@@ -114,7 +114,15 @@
     <?php endforeach; ?>
   </div>
 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+        sortDataByCategory(''); // Call the function with the desired category
+        });
+    </script>
+
+
 </body>
+
 <script type="text/javascript">
 var surah_number, surah_ayahs;
 </script>
@@ -127,6 +135,8 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+
 
         <!-- Footer-->
         <footer class="footer bg-light">
