@@ -121,10 +121,11 @@
 
 /* listsurat */
 .listsurat {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   background-color: #ffffff;
+  justify-content: center;
 }
 
 
@@ -878,8 +879,9 @@ footer.footer {
 
 .containerlistsurat{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+  grid-template-columns: repeat(3, 30rem); /* Creates three equal-width columns */
   grid-gap: 20px; /* Adjust the gap between cards */
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

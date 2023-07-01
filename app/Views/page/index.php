@@ -49,7 +49,7 @@
 
 <body class="homepage">
 
-  <div class="containerlist">    
+  <div class="containerlistsurat">    
     <?php foreach ($surah as $q) : ?>
     <?php 
     $sura = isset($_GET['sura']) ? $_GET['sura'] : 0;
