@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class SurahModel extends Model
 {
-    protected $table = 'quran_english'; // Nama tabel surah pada basis data
+    protected $table = 'quran_indonesia'; // Nama tabel surah pada basis data
 
     public function getSurahByNumber($surahNumber)
     {

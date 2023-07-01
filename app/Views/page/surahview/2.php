@@ -1,5 +1,5 @@
 <?php include('base.php'); ?>
-<script type="text/javascript">
+  <script type="text/javascript">
       var surah_name = 'Al-Baqara',
         surah_number = 2,
         surah_ayahs = 286;
