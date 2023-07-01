@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
    
@@ -6,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Learn Surah Al-Faatiha (الفاتحة) Through Word By Word English Translation And Transliteration" />
     <meta name="og:site_name" content="Word By Word English Translation And Transliteration" />
+    
     <meta name="og:title" content="Learn Surah Al-Faatiha (الفاتحة) Through Word By Word English Translation And Transliteration" />
+
     <meta name="og:image" content="../assets/images/banner.png" />
     <meta name="og:url" content="#" />
     <meta name="og:type" content="website" />
@@ -32,11 +35,12 @@
   </head>
   <body>
     <div class="loader"></div>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gold fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="./">
-          Al-Faatiha <span class="nav-slash">/</span> الفاتحة <span class="nav-surahname-en"><span class="nav-slash">/</span> The Opening</span></a
-        ><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="\">
+          Al-Faatiha <span class="nav-slash">/</span> الفاتحة <span class="nav-surahname-en"><span class="nav-slash">/</span> The Opening</span></a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span id="chevron-navbar-icon" class="chevron-down-nav"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -56,6 +60,11 @@
         </div>
       </div>
     </nav>
+
+
+
+    
+    
     <div class="modal fade bd-modal-sl" id="SettingsModal" tabindex="-1" role="dialog" aria-labelledby="SettingsModalCenter" aria-hidden="true">
       <div class="modal-dialog modal-sl modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -72,6 +81,7 @@
                 margin-bottom: 10px;
               }
             </style>
+
             <div class="container-fluid">
               <div class="row">
                 <div class="col-6">
@@ -114,6 +124,7 @@
                 </div>
               </div>
             </div>
+
           </div>
           <div class="modal-footer"><button type="button" class="btn btn-secondary" id="reset-settings" onclick="ResetSettings()">Reset</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button></div>
         </div>
@@ -130,8 +141,10 @@
           <div class="bottom-nav__item bottom-nav-surahplayer2" style="display: none" title="Click to play/pause">
             <span class="play-pause-icon play-icon"></span><span class="bottom-nav-surahname">Al-Faatiha / الفاتحة / The Opening</span><span id="bottom-nav-surahayah">(loading...)</span>
           </div>
-          <div class="bottom-nav__item bottom-nav__item--nextsurah">
-            <a class="surah-nav-links" style="font-size: 15px" href="../2"><span class="bottom-nav-surah">Al-Baqara </span><span class="chevron-right"></span></a>
+
+          <!-- <div class="bottom-nav__item bottom-nav__item--nextsurah">
+            <a class="surah-nav-links" style="font-size: 15px" href="page/detailv'," $data><span class="bottom-nav-surah">Al-Baqara </span><span class="chevron-right"></span></a> -->
+
           </div>
         </div>
       </div>

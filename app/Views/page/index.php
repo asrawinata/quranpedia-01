@@ -49,6 +49,57 @@
 <!-- SURAH LIST -->
 
 <body class="homepage">
+  <!-- Bagian-bagian lain yang ada sebelumnya -->
+
+    <!-- Tombol untuk menyortir berdasarkan Madinah -->
+    <button id="madinahBtn" class="btn btn-primary" role="button">Surah Madinah</button>
+
+    <!-- Tombol untuk menyortir berdasarkan Mekkah -->
+    <button id="mekkahBtn" class="btn btn-primary" role="button">Surah Mekkah</button>
+
+    <script type="text/javascript">
+        // Fungsi untuk menyortir berdasarkan Madinah
+        function sortDataByMadinah() {
+            var dataElements = document.getElementsByClassName('listsurat');
+            for (var i = 0; i < dataElements.length; i++) {
+                var dataElement = dataElements[i];
+                var subtitleElement = dataElement.getElementsByClassName('subtitle')[0];
+                var subtitleText = subtitleElement.innerText || subtitleElement.textContent;
+
+                if (subtitleText.includes('Madinah')) {
+                    dataElement.style.display = 'block';
+                } else {
+                    dataElement.style.display = 'none';
+                }
+            }
+        }
+
+        // Fungsi untuk menyortir berdasarkan Mekkah
+        function sortDataByMekkah() {
+            var dataElements = document.getElementsByClassName('listsurat');
+            for (var i = 0; i < dataElements.length; i++) {
+                var dataElement = dataElements[i];
+                var subtitleElement = dataElement.getElementsByClassName('subtitle')[0];
+                var subtitleText = subtitleElement.innerText || subtitleElement.textContent;
+
+                if (subtitleText.includes('Makkah')) {
+                    dataElement.style.display = 'block';
+                } else {
+                    dataElement.style.display = 'none';
+                }
+            }
+        }
+
+        // Panggil fungsi sortDataByMadinah saat tombol "Surah Madinah" diklik
+        document.getElementById('madinahBtn').addEventListener('click', function() {
+            sortDataByMadinah();
+        });
+
+        // Panggil fungsi sortDataByMekkah saat tombol "Surah Mekkah" diklik
+        document.getElementById('mekkahBtn').addEventListener('click', function() {
+            sortDataByMekkah();
+        });
+    </script>
 
     
 <?php foreach ($surah as $q) : ?>
@@ -78,7 +129,7 @@ if($sura == 0)
               <span class="index-surah-no"><?= $q['index'];  ?></span>
               <div class="main">
                 <span class="title"><?= $q['name_indonesia'];  ?> <span class="index-surahname-ar"><?= $q['name_arabic'];  ?></span></span
-                ><span class="subtitle"><?= $q['type'];  ?> <span style="float: right"><?= $q['ayas'];  ?> Verses</span></span>
+                ><span class="subtitle"><?= $q['type'];  ?> <span style="float: right"><?= $q['ayas'];  ?> Ayat</span></span>
               </div>
             </div>
           </div></a>
