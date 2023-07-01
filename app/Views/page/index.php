@@ -48,6 +48,35 @@
 <!-- SURAH LIST -->
 
 <body class="homepage">
+  <!-- Bagian-bagian lain yang ada sebelumnya -->
+
+  <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Sortir
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
+            <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        // Fungsi untuk menyortir berdasarkan kategori
+        function sortDataByCategory(category) {
+            var dataElements = document.getElementsByClassName('listsurat');
+            for (var i = 0; i < dataElements.length; i++) {
+                var dataElement = dataElements[i];
+                var subtitleElement = dataElement.getElementsByClassName('subtitle')[0];
+                var subtitleText = subtitleElement.innerText || subtitleElement.textContent;
+
+                if (subtitleText.includes(category)) {
+                    dataElement.style.display = 'block';
+                } else {
+                    dataElement.style.display = 'none';
+                }
+            }
+        }
+    </script>
 
   <div class="containerlistsurat">    
     <?php foreach ($surah as $q) : ?>
@@ -75,7 +104,7 @@
               <span class="index-surah-no"><?= $q['index'];  ?></span>
               <div class="main">
                 <span class="title"><?= $q['name_indonesia'];  ?> <span class="index-surahname-ar"><?= $q['name_arabic'];  ?></span></span
-                ><span class="subtitle"><?= $q['type'];  ?> <span style="float: right"><?= $q['ayas'];  ?> Verses</span></span>
+                ><span class="subtitle"><?= $q['type'];  ?> <span style="float: right"><?= $q['ayas'];  ?> Ayat</span></span>
               </div>
             </div>
           </div>
