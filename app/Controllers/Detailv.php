@@ -37,7 +37,11 @@ class Detailv extends Controller
     
 //     );
 
-return view('page/surahview/1');
+
+return view('page/surahview/70');
+
+
+
 
 
 
@@ -49,4 +53,5 @@ return view('page/surahview/1');
         // }
     }
 }
+
 

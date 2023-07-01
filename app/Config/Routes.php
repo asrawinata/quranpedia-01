@@ -35,10 +35,12 @@ $routes->get('/', 'Depan::index');
 // $routes->get('surah/(:num)', 'SurahController::show/$1');
 // // $routes->get('detailv/(:segment)', 'Detailv::index/$1');
 // $routes->get('detailv/(:num)', 'Detailv::index/$1');
-$routes->get('/detailv/(:segment)', 'Detailv::Detailv/$1');
+$routes->get('page/detailv', 'Detailv::getData');
+// $routes->get('/detailv/(:segment)', 'Detailv::Detailv/$1');
 
 
-$routes->get('page/1', 'Detailv::getRootData/$1');
+
+$routes->get('page/(:num)', 'Detailv::getRootData/$1');
 
 
 
