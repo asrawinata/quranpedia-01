@@ -37,7 +37,9 @@ $routes->get('/', 'Depan::index');
 // $routes->get('detailv/(:num)', 'Detailv::index/$1');
 $routes->get('/detailv/(:segment)', 'Detailv::Detailv/$1');
 
+
 $routes->get('page/1', 'Detailv::getRootData/$1');
+
 
 
 
