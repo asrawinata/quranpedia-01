@@ -870,3 +870,20 @@ footer.footer {
   background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.containerlistsurat{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+  grid-gap: 20px; /* Adjust the gap between cards */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Display one column on mobile */
+  } 
+}
