@@ -18,7 +18,6 @@
 
         <!-- head from previous -->
     </head>
-    <body>
         <!-- Navigation-->
         <!-- <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
@@ -101,30 +100,28 @@
         });
     </script>
 
-    
-<?php foreach ($surah as $q) : ?>
-<?php 
-$sura = isset($_GET['sura']) ? $_GET['sura'] : 0;
-$nama = isset($_GET['nama']) ? $_GET['nama'] : '' ;
-if($sura == 0)  
-  
-?>
+  <div class="containerlistsurat">    
+    <?php foreach ($surah as $q) : ?>
+    <?php 
+    $sura = isset($_GET['sura']) ? $_GET['sura'] : 0;
+    $nama = isset($_GET['nama']) ? $_GET['nama'] : '' ;
+    if($sura == 0)  
+      
+    ?>
 
+    <div class="listsurat">
 
+      <div class="row">
 
+        <div class="col-12 text-center">
+        </div>
 
-<div class="listsurat">
-  <div class="row">
-    <div class="col-12 text-center">
-    </div>
-  </div>
-  <div class="index-main-surah-list">
-    
-    <!-- <div class="table-row"> -->
-      <div class="table trio">
+      </div>
 
-        <a href="<?= base_url('/page/' . $q['index']); ?>"
-          ><div class="table-row">
+      <div class="index-main-surah-list">
+        <!-- <div class="table-row"> -->
+        <div class="table trio"><a href="<?= base_url('/page/' . $q['index']); ?>">
+          <div class="table-row">
             <div>
               <span class="index-surah-no"><?= $q['index'];  ?></span>
               <div class="main">
@@ -132,13 +129,13 @@ if($sura == 0)
                 ><span class="subtitle"><?= $q['type'];  ?> <span style="float: right"><?= $q['ayas'];  ?> Ayat</span></span>
               </div>
             </div>
-          </div></a>
-
+          </div>
+        </a></div>
       </div>
     </div>
+    <?php endforeach; ?>
   </div>
-</div>
-<?php endforeach; ?>
+
 </body>
 <script type="text/javascript">
 var surah_number, surah_ayahs;
