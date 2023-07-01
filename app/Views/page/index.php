@@ -50,54 +50,32 @@
 <body class="homepage">
   <!-- Bagian-bagian lain yang ada sebelumnya -->
 
-    <!-- Tombol untuk menyortir berdasarkan Madinah -->
-    <button id="madinahBtn" class="btn btn-primary" role="button">Surah Madinah</button>
-
-    <!-- Tombol untuk menyortir berdasarkan Mekkah -->
-    <button id="mekkahBtn" class="btn btn-primary" role="button">Surah Mekkah</button>
+  <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Sortir
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
+            <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
+        </ul>
+    </div>
 
     <script type="text/javascript">
-        // Fungsi untuk menyortir berdasarkan Madinah
-        function sortDataByMadinah() {
+        // Fungsi untuk menyortir berdasarkan kategori
+        function sortDataByCategory(category) {
             var dataElements = document.getElementsByClassName('listsurat');
             for (var i = 0; i < dataElements.length; i++) {
                 var dataElement = dataElements[i];
                 var subtitleElement = dataElement.getElementsByClassName('subtitle')[0];
                 var subtitleText = subtitleElement.innerText || subtitleElement.textContent;
 
-                if (subtitleText.includes('Madinah')) {
+                if (subtitleText.includes(category)) {
                     dataElement.style.display = 'block';
                 } else {
                     dataElement.style.display = 'none';
                 }
             }
         }
-
-        // Fungsi untuk menyortir berdasarkan Mekkah
-        function sortDataByMekkah() {
-            var dataElements = document.getElementsByClassName('listsurat');
-            for (var i = 0; i < dataElements.length; i++) {
-                var dataElement = dataElements[i];
-                var subtitleElement = dataElement.getElementsByClassName('subtitle')[0];
-                var subtitleText = subtitleElement.innerText || subtitleElement.textContent;
-
-                if (subtitleText.includes('Makkah')) {
-                    dataElement.style.display = 'block';
-                } else {
-                    dataElement.style.display = 'none';
-                }
-            }
-        }
-
-        // Panggil fungsi sortDataByMadinah saat tombol "Surah Madinah" diklik
-        document.getElementById('madinahBtn').addEventListener('click', function() {
-            sortDataByMadinah();
-        });
-
-        // Panggil fungsi sortDataByMekkah saat tombol "Surah Mekkah" diklik
-        document.getElementById('mekkahBtn').addEventListener('click', function() {
-            sortDataByMekkah();
-        });
     </script>
 
   <div class="containerlistsurat">    
