@@ -52,13 +52,13 @@
         <h2>Kata yang dipilih: <?php echo $selectedText; ?></h2>
 
         <?php if ($matchedRootWord) : ?>
-            <h3>Akar Kata: <?php echo $matchedRootWord; ?></h3>
+            <h3>Kata Benda: <?php echo $matchedRootWord; ?></h3>
         <?php else : ?>
             <p>No matched root word found.</p>
         <?php endif; ?>
 
         <?php if (!empty($matchedVerses)) : ?>
-            <h3>Ayat-ayat yang mengandung akar kata yang sama:</h3>
+            <h3>Ayat-ayat yang mengandung kata benda yang sama:</h3>
             <table>
                 <thead>
                     <tr>

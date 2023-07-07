@@ -833,6 +833,7 @@ header.masthead {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+
 header.masthead:before {
   content: "";
   position: absolute;
@@ -843,10 +844,18 @@ header.masthead:before {
   left: 0;
   opacity: 0.5;
 }
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 12rem;
     padding-bottom: 12rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header.masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
@@ -877,15 +886,37 @@ footer.footer {
   justify-content: space-between;
 }
 
-.containerlistsurat{
+/* listsurat */
+.containerlistsurat {
   display: grid;
-  grid-template-columns: repeat(3, 30rem); /* Creates three equal-width columns */
-  grid-gap: 20px; /* Adjust the gap between cards */
+  grid-gap: 20px;
+  /* Adjust the gap between cards */
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr; /* Display one column on mobile */
-  } 
+@media screen and (min-width: 768px) {
+
+  /* For screens larger than 768px, display three columns */
+  .containerlistsurat {
+    grid-template-columns: repeat(3, 30rem);
+    /* Creates three equal-width columns */
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* For screens smaller than or equal to 767px, display two columns */
+  .containerlistsurat {
+    grid-template-columns: repeat(2, 30rem);
+    /* Creates two equal-width columns */
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  /* For screens smaller than or equal to 480px, display one column */
+  .containerlistsurat {
+    grid-template-columns: 30rem;
+    /* Creates a single column */
+  }
 }
