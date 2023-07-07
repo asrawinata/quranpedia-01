@@ -30,20 +30,20 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Depan::index');
-// $routes->get('/', 'Detailv::getRootData');
+// $routes->get('page/(:num)', 'Detailv::akarkata');
 // $routes->get('/detailv/(:segment)', 'detailc::detail/$1');
 // $routes->get('surah/(:num)', 'SurahController::show/$1');
 // // $routes->get('detailv/(:segment)', 'Detailv::index/$1');
 // $routes->get('detailv/(:num)', 'Detailv::index/$1');
+
+// $routes->get('page/detailv/(:segment)', 'Detailv::getData/$1');
 $routes->get('page/detailv', 'Detailv::getData');
-// $routes->get('/detailv/(:segment)', 'Detailv::Detailv/$1');
 
-
+// $routes->get('page/1', 'Detailv::getRootData');
 
 $routes->get('page/(:num)', 'Detailv::getRootData/$1');
 
-
-
+// $routes->get('/detailv', 'Detailv::akarkata');
 
 
 // $routes->get('/', 'Home::index');

@@ -80,7 +80,7 @@ function toggle_reciter() {
 }
 function loadAyahs(a, c, e) {
   localStorage.getItem('reciter');
-  $.getJSON('../surahs/data/' + a + '.json', function (b) {
+  $.getJSON('../assets/surahs/data/' + a + '.json', function (b) {
     var d,
       f,
       g = Object.keys(b).length;
@@ -109,7 +109,7 @@ function loadAyahs(a, c, e) {
   });
 }
 function loadDuas(a, c, e) {
-  $.getJSON('../surahs/data/' + a + '.json', function (b) {
+  $.getJSON('../assets/surahs/data/' + a + '.json', function (b) {
     var d,
       f,
       g = Object.keys(b).length;
@@ -488,7 +488,7 @@ $('.back-to-ayah').on('click', function () {
   $('html, body').animate({ scrollTop: $('.ayah-hover').offset().top - 50 }, 1e3);
 });
 $('#modal-about-content').load('assets/about.html');
-$('#surah-list').load('assets/surahs.html');
+$('#surah-list').load('../assets/surahs.html');
 $(window).on('load', function (a) {
   a = localStorage.getItem('toggle_theme_mode_change');
   var c = localStorage.getItem('toggle_theme_mode_disabled');

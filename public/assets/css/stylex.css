@@ -41,6 +41,8 @@ a:hover {
 .homepage {
   padding-top: 40px;
   padding-bottom: 40px;
+  padding-left: 500px;
+  padding-right: 500px;
   background-color: #fff;
 }
 .index-main-surah-list {
@@ -51,7 +53,7 @@ a:hover {
   color: var(--gold);
   font-weight: 600;
   padding-right: 20px;
-  margin-top: -8px;
+  margin-top: -19px;
 }
 .index-surahname-ar {
   font-size: 15px;

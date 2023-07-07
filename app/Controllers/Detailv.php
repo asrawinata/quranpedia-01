@@ -22,58 +22,85 @@ class Detailv extends BaseController
     public function getRootData($pageNumber)
     {
 
-    return view('page/surahview/' .$pageNumber);
+    return view('page/' .$pageNumber);
 
 
 
     }
 
-    public function getData() {
+    public function getData()
+{
+    $selectedText = $this->request->getVar('selectedText');
 
-        $selectedText = $this->request->getVar('selectedText');
+    $surahModel = new SurahModel();
 
+    $arabicWordJson = file_get_contents('arabicword.json');
+    $arabicWordData = json_decode($arabicWordJson, true);
 
-        $arabicWordJson = file_get_contents('arabicword.json');
-        $arabicWordData = json_decode($arabicWordJson, true);
+    $rootWordsJson = file_get_contents('rootwords.json');
+    $rootWordsData = json_decode($rootWordsJson, true);
 
-        $rootWordsJson = file_get_contents('rootwords.json');
-        $rootWordsData = json_decode($rootWordsJson, true);
+    $matchedRootId = null;
+    $matchedRootWord = '';
 
-        $matchedRootWord = '';
+    foreach ($arabicWordData['ArabicWord'] as $arabicWord) {
+        if ($arabicWord['word'] == $selectedText) {
+            $matchedRootId = $arabicWord['root_id'];
+            break;
+        }
+    }
 
-        foreach ($arabicWordData['ArabicWord'] as $arabicWord) {
-            if ($arabicWord['word'] == $selectedText) {
-
-                foreach ($rootWordsData['RootWords'] as $rootWord) {
-                    if ($rootWord['root_id'] == $arabicWord['root_id']) {
-                        $matchedRootWord = $rootWord['root_word'];
-                        break;
-                    }
-                }
+    if ($matchedRootId) {
+        foreach ($rootWordsData['RootWords'] as $rootWord) {
+            if ($rootWord['root_id'] == $matchedRootId) {
+                $matchedRootWord = $rootWord['root_word'];
                 break;
             }
         }
+    }
 
+    $matchedWords = [];
+    if ($matchedRootId) {
+        $matchedWords = $surahModel->getWordsByRootId($matchedRootId);
+    }
 
-        $data = [
-            'selectedText' => $selectedText,
-            'matchedRootWord' => $matchedRootWord,
-        ];
+    $matchedVerses = [];
+    if (!empty($matchedWords)) {
+        $matchedVerses = $surahModel->getQuranVersesByWords($matchedWords);
+    }
 
-        return view('page/detailv', $data);
-        }
+    $data = [
+        'selectedText' => $selectedText,
+        'matchedRootId' => $matchedRootId,
+        'matchedRootWord' => $matchedRootWord,
+        'matchedWords' => $matchedWords,
+        'matchedVerses' => $matchedVerses,
+    ];
+
+    return view('page/detailv', $data);
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
       
     
 
-//     public function akarkata()
-//     {
-//         $detailakar = $this->detailModel->findAll();
+    public function akarkata()
+    {
+        $detailakar = $this->detailModel->findAll();
 
-//         $kata = [
-//             'akarquran' => $detailakar,
-//         ];
+        $kata = [
+            'akarquran' => $detailakar,
+        ];
 
-//     return view ('page/surahview/1', $kata);
-//     }
+    return view ('page/1', $kata);
+    }
 }

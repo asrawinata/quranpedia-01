@@ -20,7 +20,7 @@ class Depan extends BaseController
 
         $data = [
             'surah' => $quranhome,
-            // 'ayat' => $quranhome
+            // 'ayat' => $quranhome,
         ];
     
         // dd($quranhome);
@@ -29,7 +29,12 @@ class Depan extends BaseController
 
     public function show_daftar()
     {
-        
+        // $title = $this->depanModel->findAll();
+
+        // $atas = [
+        //     'title' => 'Home',
+        // ];
+        // return view('layout/navbar', $atas);
     }
 
     public function id($index)
