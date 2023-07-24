@@ -62,9 +62,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Sura</th>
-                        <th>Aya</th>
-                        <th style="text-align: right;">Text</th>
+                        <th>Nomor Surah</th>
+                        <th>Ayat Ke</th>
+                        <th style="text-align: right;">Ayat</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -7,6 +7,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Quranpedia</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -35,10 +39,10 @@
                     <!-- Page heading-->
                     <h3 class="mb-5">Quranpedia is an website built by students of Software Engineering Telkom Unviersity, Quranpedia Explain Quran term with Quran verses and Hadits and Wikipedia </h3>
 
-                    <div class="input-group">
+                    <!-- <div class="input-group">
                         <input type="search" class="form-control rounded" placeholder="Surah apa yang ingin anda telusuri?" aria-label="Search" aria-describedby="search-addon" />
                         <a href="search" class="btn btn-primary" role="button">Cari</a>
-                    </div>
+                    </div> -->
                     <!-- <a href="daftar_surah" class="btn btn-primary" role="button">Daftar Surah</a> -->
                 </div>
             </div>
@@ -47,11 +51,19 @@
 </header>
 
 <!-- SURAH LIST -->
+<div class="container">
+    <ul class="nav nav-pills">
+
+        <li><a data-toggle="pill" href="#" onclick="resetData('Semua')">Semua</a></li>
+        <li><a data-toggle="pill" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
+        <li><a data-toggle="pill" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
+    </ul>
+</div>
 
 <body class="homepage">
     <!-- Bagian-bagian lain yang ada sebelumnya -->
 
-    <div class="dropdown">
+    <!-- <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Sortir
         </button>
@@ -59,10 +71,19 @@
             <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
             <li><a class="dropdown-item" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
         </ul>
-    </div>
+    </div> -->
+
+    <!-- <div class="container">
+        <ul class="tabs">
+            <a class="dropdown-item" href="#" onclick="resetData('Semua')">Semua</a></li>
+            <a class="dropdown-item" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
+            <a class="dropdown-item" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
+        </ul>
+    </div> -->
+
 
     <script type="text/javascript">
-        // Fungsi untuk menyortir berdasarkan kategori
+        // Function to sort data by category
         function sortDataByCategory(category) {
             var dataElements = document.getElementsByClassName('listsurat');
             for (var i = 0; i < dataElements.length; i++) {
@@ -77,7 +98,16 @@
                 }
             }
         }
+
+        // Function to reset and show all data
+        function resetData() {
+            var dataElements = document.getElementsByClassName('listsurat');
+            for (var i = 0; i < dataElements.length; i++) {
+                dataElements[i].style.display = 'block';
+            }
+        }
     </script>
+
 
     <div class="containerlistsurat">
         <?php foreach ($surah as $q) : ?>
