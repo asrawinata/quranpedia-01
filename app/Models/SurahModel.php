@@ -6,13 +6,30 @@ use CodeIgniter\Model;
 
 class SurahModel extends Model
 {
-    protected $table = 'quran_english'; // Nama tabel surah pada basis data
+    protected $table = 'quran_arabic';
 
-    public function getSurahByNumber($surahNumber)
+    public function getWordsByRootId($rootId)
     {
-        // Mengambil data surah berdasarkan nomor surah
-        $query = $this->where('number', $surahNumber)->first();
+        $arabicWordJson = file_get_contents('arabicword.json');
+        $arabicWordData = json_decode($arabicWordJson, true);
 
-        return $query;
+        $matchedWords = [];
+        foreach ($arabicWordData['ArabicWord'] as $arabicWord) {
+            if ($arabicWord['root_id'] == $rootId) {
+                $matchedWords[] = $arabicWord['word'];
+            }
+        }
+
+        return $matchedWords;
     }
+
+public function getQuranVersesByWords($words)
+{
+    $matchedVerses = [];
+    foreach ($words as $word) {
+        $matchedVerses[] = $this->select('sura, aya, text')->where('text LIKE', "%$word%")->findAll();
+    }
+
+    return $matchedVerses;
+}
 }
