@@ -1,9 +1,3 @@
-import json
-
-data = []  # List to store the formatted data
-
-# Example list of Arabic texts
-arabic_texts = [
 "الابصار",
 "الابل",
 "الابواب",
@@ -675,22 +669,3 @@ arabic_texts = [
 "اليمين",
 "اليهود",
 "اليوم"
-
-
-]
-
-# Iterate over the Arabic texts and format the data
-for index, arabic_text in enumerate(arabic_texts):
-    formatted_data = {
-        "KataBenda_id": index,
-        "KataBenda": arabic_text
-    }
-
-    # Add the formatted data to the list
-    data.append(formatted_data)
-
-# Save the data to a JSON file
-with open('formatted_data.json', 'w', encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii=False, indent=4)
-
-print("Data saved to formatted_data.json file.")
