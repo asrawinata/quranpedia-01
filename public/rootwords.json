@@ -6,7 +6,7 @@
     },
     {
       "root_id": 1798,
-      "root_word": "الرحيم"
+      "root_word": "الرَّحِيمِ"
     },
 
  
@@ -29,18 +29,6 @@
     {
       "root_id": 583,
       "root_word": "هدى"
-    },
-    {
-      "root_id": 1532,
-      "root_word": "صراط"
-    },
-    {
-      "root_id": 1705,
-      "root_word": "مستقيم"
-    },
-    {
-      "root_id": 1516,
-      "root_word": "الذين"
     },
     {
       "root_id": 195,
@@ -77,6 +65,34 @@
     {
       "root_id": 1040,
       "root_word": "الحمد"
+    },
+    {
+      "root_id": 1532,
+      "root_word": "الصِّرَاطَ"
+    },
+    {
+      "root_id": 1705,
+      "root_word": "الْمُسْتَقِيمَ"
+    },
+     {
+      "root_id": 1244,
+      "root_word": "النَّاسِ"
+    },
+    {
+      "root_id": 357,
+      "root_word": "الْخَنَّاسِ"
+    },
+    {
+      "root_id": 1516,
+      "root_word": "الَّذِي"
+    },
+    {
+      "root_id": 457,
+      "root_word": "الْفَلَقِ"
+    },
+    {
+      "root_id": 1315,
+      "root_word": "النَّفَّاثَاتِ"
     }
   ]
 }

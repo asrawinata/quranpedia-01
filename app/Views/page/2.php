@@ -3,7 +3,7 @@
 <div class="loader"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-gold fixed-top">
   <div class="container">
-    <a class="navbar-brand">
+    <a class="navbar-brand" href="/">
       Al-Baqara <span class="nav-slash">/</span> البقرة <span class="nav-surahname-en"><span class="nav-slash">/</span> The Cow</span></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span id="chevron-navbar-icon" class="chevron-down-nav"></span>
     </button>
