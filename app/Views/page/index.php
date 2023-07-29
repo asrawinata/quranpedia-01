@@ -52,12 +52,12 @@
 
 <!-- SURAH LIST -->
 <div class="container">
-    <ul class="nav nav-pills">
+    <!-- <ul class="nav nav-pills">
 
         <li><a data-toggle="pill" href="#" onclick="resetData('Semua')">Semua</a></li>
         <li><a data-toggle="pill" href="#" onclick="sortDataByCategory('Makkah')">Makkah</a></li>
         <li><a data-toggle="pill" href="#" onclick="sortDataByCategory('Madinah')">Madinah</a></li>
-    </ul>
+    </ul> -->
 </div>
 
 <body class="homepage">
@@ -82,7 +82,7 @@
     </div> -->
 
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         // Function to sort data by category
         function sortDataByCategory(category) {
             var dataElements = document.getElementsByClassName('listsurat');
@@ -106,7 +106,7 @@
                 dataElements[i].style.display = 'block';
             }
         }
-    </script>
+    </script> -->
 
 
     <div class="containerlistsurat">

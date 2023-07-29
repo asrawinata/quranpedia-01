@@ -66,7 +66,7 @@ class Detailv extends BaseController
             $matchedVerses = $surahModel->getQuranVersesByWords($matchedWords);
         }
 
-        print_r($matchedWords);
+        // print_r($matchedWords);
 
         $data = [
             'selectedText' => $selectedText,

@@ -36,8 +36,21 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-gold fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                Quranpedia - Kata Benda </a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#" onclick="goBack()">
+                Quranpedia - Kata Benda
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Add any necessary button content here -->
+            </button>
+
+            <!-- Add the script to handle the back button functionality -->
+            <script>
+                function goBack() {
+                    // Go back to the previous page in the browser history
+                    window.history.back();
+                }
+            </script>
+
 
         </div>
         </div>
