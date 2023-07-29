@@ -27,7 +27,7 @@ class Detailv extends BaseController
 
     public function getData()
     {
-        $selectedText = $this->request->getVar('selectedText');
+        $selectedText = trim($this->request->getVar('selectedText'));
 
         $surahModel = new SurahModel();
 
@@ -66,6 +66,8 @@ class Detailv extends BaseController
             $matchedVerses = $surahModel->getQuranVersesByWords($matchedWords);
         }
 
+        print_r($matchedWords);
+
         $data = [
             'selectedText' => $selectedText,
             'matchedRootId' => $matchedRootId,
@@ -76,19 +78,6 @@ class Detailv extends BaseController
 
         return view('page/detailv', $data);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public function akarkata()
     {

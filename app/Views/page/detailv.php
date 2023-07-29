@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Quranpedia - Akar Kata</title>
+    <title>Quranpedia - Kata Benda</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gold fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                Quranpedia - Akar Kata </a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Quranpedia - Kata Benda </a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
         </div>
         </div>
@@ -46,65 +46,52 @@
     <br>
     <!-- <h1>Detail View</h1> -->
     <div class="container">
-        <!-- <div class="row full-surah" style="padding: 50px 0px 50px 0px"> -->
 
-
-        <h2>Kata yang dipilih: <?php echo $selectedText; ?></h2>
+        <h2 style="font-family: IndoPak;">Kata yang dipilih: <?php echo $selectedText; ?></h2>
 
         <?php if ($matchedRootWord) : ?>
-            <h3>Akar Kata: <?php echo $matchedRootWord; ?></h3>
-        <?php else : ?>
-            <p>No matched root word found.</p>
-        <?php endif; ?>
+            <h2 style="font-family: IndoPak;">Kata Benda: <?php echo $matchedRootWord; ?></h3>
+            <?php else : ?>
+                <p style="font-family: IndoPak;">Kata yang dipilih tidak termasuk kata benda.</p>
+            <?php endif; ?>
 
-        <?php if (!empty($matchedVerses)) : ?>
-            <h3>Ayat-ayat yang mengandung akar kata yang sama:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nomor Surah</th>
-                        <th>Ayat Ke</th>
-                        <th style="text-align: right;">Ayat</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($matchedVerses as $verses) : ?>
-                        <?php foreach ($verses as $verse) : ?>
-                            <tr>
-                                <td><?php echo $verse['sura']; ?></td>
-                                <td><?php echo $verse['aya']; ?></td>
-                                <td style="text-align: right;"><?php echo highlightText($verse['text'], $matchedWords); ?></td>
-                            </tr>
+            <?php if (!empty($matchedRootWord)) : ?>
+                <h2 style="font-family: IndoPak" ;>Ayat ayat yang mengandung kata benda yang sama:
+                </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="font-family: IndoPak">Surat</th>
+                            <th style="font-family: IndoPak">Ayat ke</th>
+                            <th style="text-align: right; font-family: IndoPak" width="100%">Ayat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($matchedVerses as $verses) : ?>
+                            <?php foreach ($verses as $verse) : ?>
+                                <tr>
+                                    <td style="font-family: IndoPak"><?php echo $verse['sura']; ?></td>
+                                    <td style="font-family: IndoPak"><?php echo $verse['aya']; ?></td>
+                                    <td style="text-align: right; font-family: IndoPak, arial; font-size: 30px;"><?php echo highlightText($verse['text'], $matchedWords); ?></td>
+                                </tr>
+                            <?php endforeach; ?>
                         <?php endforeach; ?>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php else : ?>
-            <p>No matched verses found.</p>
-        <?php endif; ?>
+                    </tbody>
+                </table>
+            <?php else : ?>
+                <p></p>
+            <?php endif; ?>
 
-        <?php
-        function highlightText($text, $matchedWords)
-        {
-            foreach ($matchedWords as $word) {
-                $text = str_ireplace($word, '<span style="color: red;">' . $word . '</span>', $text);
+            <?php
+            function highlightText($text, $matchedWords)
+            {
+                foreach ($matchedWords as $word) {
+                    $text = str_ireplace($word, '<span style="color: red;">' . $word . '</span>', $text);
+                }
+                return $text;
             }
-            return $text;
-        }
-        ?>
+            ?>
 
-
-
-
-
-
-
-
-
-
-
-
-    </div>
     </div>
     <!-- </div> -->
     <script async src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>

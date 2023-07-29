@@ -17,8 +17,6 @@
           <a class="nav-link dropdown-toggle" href="#" id="AyahSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ayah <span id="chevron-selector-ayah" class="chevron-down"></span></a>
           <div class="dropdown-menu ayah-selector" aria-labelledby="AyahSelector"></div>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#AboutModal">About </a></li>
-        <li class="nav-item"><a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#SettingsModal">Settings </a></li>
       </ul>
     </div>
   </div>

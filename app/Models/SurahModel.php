@@ -23,13 +23,28 @@ class SurahModel extends Model
         return $matchedWords;
     }
 
-public function getQuranVersesByWords($words)
-{
-    $matchedVerses = [];
-    foreach ($words as $word) {
-        $matchedVerses[] = $this->select('sura, aya, text')->where('text LIKE', "%$word%")->findAll();
-    }
+    // public function getQuranVersesByWords($words)
+    // {
+    //     $matchedVerses = [];
+    //     foreach ($words as $word) {
+    //         $matchedVerses[] = $this->select('sura, aya, text')->where('text LIKE', "%$word%")->findAll();
+    //     }
 
-    return $matchedVerses;
-}
+    //     return $matchedVerses;
+    // }
+
+    public function getQuranVersesByWords($words)
+    {
+        $matchedVerses = [];
+        foreach ($words as $word) {
+            $verses = $this->select('sura.name_indonesia AS sura, aya, text')
+                ->join('sura', 'sura.index = quran_arabic.sura', 'left')
+                ->like('text', $word)
+                ->findAll();
+
+            $matchedVerses[] = $verses;
+        }
+
+        return $matchedVerses;
+    }
 }

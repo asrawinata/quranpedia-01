@@ -169,7 +169,7 @@
 
 
 <!-- Footer-->
-<footer class="footer bg-light">
+<!-- <footer class="footer bg-light">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
@@ -199,7 +199,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->

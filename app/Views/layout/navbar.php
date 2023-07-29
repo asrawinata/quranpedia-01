@@ -40,8 +40,6 @@
     <div class="modal-dialog modal-sl modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="SettingsModalCenter">Settings</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <style type="text/css">
@@ -53,50 +51,9 @@
               margin-bottom: 10px;
             }
           </style>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Arabic </span><span class="ar-c-f"></span></div>
-                <div class="col nav-settings">
-                  <button type="button" class="btn btn-nav btn-sm" onclick="font('wa', 'decrease')">Dec -</button><button type="button" class="btn btn-nav btn-sm" onclick="font('wa', 'increase')">Inc +</button>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Transliteration </span><span class="tl-c-f"></span></div>
-                <div class="col nav-settings">
-                  <button type="button" class="btn btn-nav btn-sm" onclick="font('wl', 'decrease')">Dec -</button><button type="button" class="btn btn-nav btn-sm" onclick="font('wl', 'increase')">Inc +</button>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Translation </span><span class="tr-c-f"></span></div>
-                <div class="col nav-settings">
-                  <button type="button" class="btn btn-nav btn-sm" onclick="font('wt', 'decrease')">Dec -</button><button type="button" class="btn btn-nav btn-sm" onclick="font('wt', 'increase')">Inc +</button>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Font Type (F)</span></div>
-                <div class="col nav-settings"><button type="button" class="btn btn-nav btn-sm" id="font" onclick="toggle_text('font_type')">IndoPak</button></div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Theme (T)</span></div>
-                <div class="col nav-settings"><button type="button" class="btn btn-nav btn-sm" id="theme_mode" onclick="toggle_theme_mode()">Light</button></div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Display Mode (M)</span></div>
-                <div class="col nav-settings"><button type="button" class="btn btn-nav btn-sm" id="display_mode" onclick="toggle_display_mode()">Word By Word</button></div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Reciter</span></div>
-                <div class="col nav-settings"><button type="button" class="btn btn-nav btn-sm" id="reciter" onclick="toggle_reciter()">Mishary Rashid Alafasy</button></div>
-              </div>
-              <div class="col-6">
-                <div class="col nav-settings"><span class="n-s">Auto-Scroll</span></div>
-                <div class="col nav-settings"><button type="button" class="btn btn-nav btn-sm" id="auto_scroll" onclick="toggle_auto_scroll()">Yes</button></div>
-              </div>
-            </div>
-          </div>
+
         </div>
-        <div class="modal-footer"><button type="button" class="btn btn-secondary" id="reset-settings" onclick="ResetSettings()">Reset</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button></div>
+
       </div>
     </div>
   </div>
